@@ -1,4 +1,3 @@
-import React from "react";
 import SideNav from './SideProfile/SideNav/SideNav';
 import Timeline from './MainPage/Timeline/Timeline';
 import "./Login.css";
