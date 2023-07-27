@@ -6,6 +6,7 @@ import { IoStatsChartOutline } from "react-icons/io5";
 import { FiSettings } from "react-icons/fi";
 import { FiLogOut } from "react-icons/fi";
 import './Actions.css';
+import Logout from '../Logout/Logout';
 
 function Actions() {
   return (<>
@@ -34,7 +35,7 @@ function Actions() {
     <hr />
     <div className="logout">
       <FiLogOut />
-      <p>Logout</p>
+      <Logout />
     </div>
     </>
   )

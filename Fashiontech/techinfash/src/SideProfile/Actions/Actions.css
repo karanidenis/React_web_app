@@ -30,6 +30,7 @@
 .feed > p{
     font-weight: bold;
 }
+
 hr{
     margin-right: 10px;
     width: 60%;
@@ -38,4 +39,6 @@ hr{
 
 .logout{
     margin-left: 15%;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
