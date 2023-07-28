@@ -151,8 +151,19 @@ function Feed(props) {
                 name: "glory"},
 
             {  id: 7,
-                name: "kessy"}
-            
+                name: "kessy"},
+
+            {  id: 8,
+                name: user.firstName},
+
+            {  id: 9,
+                name: user.lastName},
+
+            {  id: 10,
+                name: "cake"},
+
+            {  id: 11,
+                name: "loyk"},
         ]
 
   return (<>
