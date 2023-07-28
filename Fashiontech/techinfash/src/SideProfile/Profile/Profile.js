@@ -6,7 +6,8 @@ import { useUser } from "@clerk/clerk-react";
 
 function Profile() {
   // const username = 'karanii';
-    const { user } = useUser();                             
+    const { user } = useUser();
+    // const totalUsers = await clerkClient.users.getCount();                        
   return (
     <>
     <div className='profile'>
@@ -22,7 +23,7 @@ function Profile() {
       </div>
       <div className='profile_follow'>
         <div>
-          <h4>9</h4>
+          <h4>1</h4>
           <p>Posts</p>
         </div>
         <div>
@@ -30,7 +31,7 @@ function Profile() {
           <p>Followers</p>
         </div>
         <div>
-          <h4>536</h4>
+          <h4>0</h4>
           <p>Following</p>
         </div>
       </div>
@@ -39,3 +40,5 @@ function Profile() {
 }
 
 export default Profile
+
+

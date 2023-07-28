@@ -1,6 +1,7 @@
 import React from 'react';
 import './Stories.css';
 import Avatar from '@mui/material/Avatar';
+import Tooltip from '@mui/material/Tooltip';
 
 function Stories() {
   const stories = [
@@ -52,8 +53,10 @@ function Stories() {
       <div className="stories__avatars-container">
         <div className="stories__avatars">
           { stories.map((story) => (
+        <Tooltip title="Feature locked" placement="bottom">
             <Avatar key={story.id} src={story.src} sx={{ width: 90, height: 90 }} />
-          ))}         
+        </Tooltip>
+          ))}   
         </div>
       </div>
     </>

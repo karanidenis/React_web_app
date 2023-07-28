@@ -3,6 +3,9 @@ import './Feed.css';
 import Avatar from '@mui/material/Avatar';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { FaRegComment } from "react-icons/fa";
+import { useUser } from "@clerk/clerk-react";
+
+// import LensBlurTwoToneIcon from '@mui/icons-material/LensBlurTwoTone';
 
 const ImgContainer = (props) => {
     const [spans, setSpans] = useState(0)
@@ -28,6 +31,9 @@ const ImgContainer = (props) => {
                 ref={imageRef}
                 alt="fashion"
             />
+                {/* <LensBlurTwoToneIcon className='trendIcon'>
+                </LensBlurTwoToneIcon> */}
+            
             <div className='feed__footer'>
                 <div className='feed__footer__left'>
                     <Avatar src={props.avatars.find((avatar) => avatar.id === props.image.id)?.src} />
@@ -35,7 +41,7 @@ const ImgContainer = (props) => {
                 </div>
                 <div className='feed__footer__right'>
                     <FavoriteBorderIcon />
-                    <span>1.2k</span>
+                    <span>15</span>
                     <FaRegComment />
                 </div>
             </div>
@@ -61,7 +67,22 @@ function Feed(props) {
                 src: "https://images.pexels.com/photos/2112651/pexels-photo-2112651.jpeg?auto=compress&cs=tinysrgb&w=400"},
 
         {   id: 6,
-                src: "https://images.pexels.com/photos/13577670/pexels-photo-13577670.jpeg?auto=compress&cs=tinysrgb&w=400"}
+                src: "https://images.pexels.com/photos/13577670/pexels-photo-13577670.jpeg?auto=compress&cs=tinysrgb&w=400"},
+
+        {   id: 7,
+                src: "https://i.pinimg.com/236x/bd/f5/02/bdf50239f020caa130c3a19a73b50e58.jpg"},
+
+        {   id: 8,
+                src: "https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_710/https://www.lovehappensmag.com/blog/wp-content/uploads/2022/09/GettyImages-118246780-edited.jpg"},
+            
+        {   id: 9,
+                src: "https://i.pinimg.com/236x/3a/bc/c9/3abcc9e05188d3b8478ef9e5ab612656.jpg"},
+
+        {   id: 10,
+                src: "https://i.pinimg.com/474x/0c/40/70/0c40701c2766fe23ce724e30f67a36ee.jpg"},
+
+        {   id: 11,
+                src: "https://i.pinimg.com/236x/3b/28/d6/3b28d617abcf50e614c0617157080cb4.jpg"}
     ]
                 console.log(images.map((image) => image.src))
 
@@ -82,12 +103,37 @@ function Feed(props) {
             src: "https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_640.jpg"},
         
         {   id: 6,
-            src: "https://images.pexels.com/photos/13996056/pexels-photo-13996056.jpeg?auto=compress&cs=tinysrgb&w=400"}
+            src: "https://images.pexels.com/photos/13996056/pexels-photo-13996056.jpeg?auto=compress&cs=tinysrgb&w=400"},
+
+        { id: 7,
+            src: "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+       { id: 8,
+             src: "https://images.pexels.com/photos/965324/pexels-photo-965324.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+       { id: 9,
+       src: "https://images.pexels.com/photos/794062/pexels-photo-794062.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+       { id: 10,
+       src: "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+       { id: 11,
+       src: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+    { id: 12,
+       src: "https://images.pexels.com/photos/794063/pexels-photo-794063.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+    { id: 13,
+         src: "https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=400" },
+    
+    { id: 14,
+       src: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=400" },
         ]
 
+        const { user } = useUser();                          
         const users = [
             {   id: 1,
-                name: "Karanii"},
+                name: user.username},
 
             {   id: 2,
                 name: "stella"},
