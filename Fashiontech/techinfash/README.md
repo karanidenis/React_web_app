@@ -1,6 +1,6 @@
 # FashionWebApp
 
-Welcome to FashionWebApp, a React-based web application for exploring the latest fashion trends!
+Welcome to FashionWebApp, a React-based web application for exploring the fashion industry!
 
 ## Installation
 
@@ -28,7 +28,7 @@ npm install
 ```bash 
 npm start
 ```  
-This will launch the FashionWebApp in your default web browser. You can now explore the latest fashion trends and enjoy using the app!
+This will launch the FashionWebApp in your default web browser. You can now explore fashion trends and enjoy using the app!
 
 ## Contributing  
 We welcome contributions from the community. If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.  
