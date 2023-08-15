@@ -2,6 +2,7 @@ import React from 'react';
 import './Stories.css';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
+import { shuffle } from 'lodash';
 
 function Stories() {
   const stories = [
@@ -17,8 +18,9 @@ function Stories() {
     { id: 5,
        src: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400" },
     
-       { id: 6,
+    { id: 6,
        src: "https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_640.jpg" },
+
     { id: 7,
        src: "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=400" },
     
@@ -44,6 +46,8 @@ function Stories() {
        src: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=400" },
     ]
 
+const shuffledstories = shuffle(stories);
+
   return (
     <>
       <div className='stories__title'>
@@ -52,7 +56,7 @@ function Stories() {
       </div>
       <div className="stories__avatars-container">
         <div className="stories__avatars">
-          { stories.map((story) => (
+          { shuffledstories.map((story) => (
         <Tooltip title="Feature locked" placement="bottom">
             <Avatar key={story.id} src={story.src} sx={{ width: 90, height: 90 }} />
         </Tooltip>
