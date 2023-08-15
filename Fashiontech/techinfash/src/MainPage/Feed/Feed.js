@@ -1,9 +1,10 @@
-import React, { useRef, useState, useEffect} from 'react';
+import React, { useRef, useState, useEffect, useMemo} from 'react';
 import './Feed.css';
 import Avatar from '@mui/material/Avatar';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { FaRegComment } from "react-icons/fa";
 import { useUser } from "@clerk/clerk-react";
+import { shuffle } from 'lodash';
 
 // import LensBlurTwoToneIcon from '@mui/icons-material/LensBlurTwoTone';
 
@@ -50,6 +51,9 @@ const ImgContainer = (props) => {
 }
 
 function Feed(props) {
+    // const [shownImageIndices, setShownImageIndices] = useState([]);
+    // const [currentIndex, setCurrentIndex] = useState(0);
+
     const images = [
         {   id: 1,
             src : "https://img.freepik.com/premium-photo/young-woman-portrait-green-high-fashion-clothing-pastel-colors-generative-ai_108146-4860.jpg"},
@@ -166,6 +170,9 @@ function Feed(props) {
                 name: "loyk"},
         ]
 
+        // const shuffledimages = images.sort(() => 0.5 - Math.random());
+        const shuffledimages = shuffle(images);
+
   return (<>
         <div className='feeds'>
             <div className='feeds__header'>
@@ -173,7 +180,7 @@ function Feed(props) {
                 <div>Latest</div>
             </div>
             <div className='feed__posts'>
-                {images.map((image) => {
+                {shuffledimages.map((image) => {
                     const user = users.find((user) => user.id === image.id);
                     return <ImgContainer image={image} avatars={avatars} user={user} />
                 })}
@@ -182,4 +189,6 @@ function Feed(props) {
      </>
 );
             }
+
+
 export default Feed;
