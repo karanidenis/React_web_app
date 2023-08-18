@@ -1,5 +1,5 @@
-import './Logout.css';
-import React from 'react';
+import "./Logout.css";
+import React from "react";
 import { useClerk } from "@clerk/clerk-react";
 
 function Logout() {
@@ -10,10 +10,10 @@ function Logout() {
   };
 
   return (
-    <div className='clerksignout'                                                                                                                                   >
+    <div className="clerksignout">
       <p onClick={handleLogout}>Logout</p>
     </div>
-  )
+  );
 }
 
 export default Logout;

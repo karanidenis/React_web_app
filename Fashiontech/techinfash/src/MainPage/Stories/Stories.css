@@ -1,44 +1,49 @@
 .stories__avatars-container {
-    width: 100%;
-    overflow-x: auto;
-    /* overflow: hidden; */
-    /* Enable horizontal scrolling */
-    white-space: nowrap;
-    /* Prevent avatars from wrapping to new lines */
-    
+  width: 100%;
+  overflow-x: auto;
+  /* overflow: hidden; */
+  /* Enable horizontal scrolling */
+  white-space: nowrap;
+  /* Prevent avatars from wrapping to new lines */
 }
 
 .stories__avatars {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    padding: 0 1rem;
-    flex-shrink: 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 1rem;
+  flex-shrink: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .stories__avatars::-webkit-scrollbar {
-    width: 0;
-    /* Remove the scrollbar */
-    background-color: transparent;
-    /* Set the scrollbar background color to transparent */
-    display: none;
+  width: 0;
+  /* Remove the scrollbar */
+  background-color: transparent;
+  /* Set the scrollbar background color to transparent */
+  display: none;
 }
 
 .stories__title {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.watch{
-    /* color: #0095f6; */
-    /* font-weight: 400; */
-    font-size: 1rem;
-    cursor: pointer;
-    margin-right: 1rem;
+.watch {
+  /* color: #0095f6; */
+  /* font-weight: 400; */
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  h3{
+    display: none;
+  }
 }

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function TrendPage() {
-  return (
-    <div>
-        TrendPage
-    </div>
-  )
+  return <div>TrendPage</div>;
 }
 
-export default TrendPage
+export default TrendPage;

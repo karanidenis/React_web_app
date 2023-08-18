@@ -1,5 +1,5 @@
-import SideNav from './SideProfile/SideNav/SideNav';
-import Timeline from './MainPage/Timeline/Timeline';
+import SideNav from "./SideProfile/SideNav/SideNav";
+import Timeline from "./MainPage/Timeline/Timeline";
 import "./Login.css";
 import {
   ClerkProvider,
@@ -13,7 +13,7 @@ const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 if (!clerkPubKey) {
   // eslint-disable-next-line no-throw-literal
-  throw "Missing Publishable Key"
+  throw "Missing Publishable Key";
 }
 
 function SignIn() {
@@ -27,10 +27,10 @@ function SignIn() {
           <div className="side">
             <SideNav />
           </div>
-        <div className="main">
-          <Timeline />
+          <div className="main">
+            <Timeline />
+          </div>
         </div>
-    </div>
       </SignedIn>
       <SignedOut>
         <RedirectToSignIn />

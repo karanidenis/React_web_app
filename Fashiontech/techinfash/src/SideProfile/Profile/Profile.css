@@ -1,63 +1,63 @@
-.profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    /* box-shadow: 0 0 10px #997979; */
-    width: 100%;
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* box-shadow: 0 0 10px #997979; */
+  width: 100%;
 }
 
-.profile_follow{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 8px;
+.profile_follow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 8px;
 }
 
-.avatar__logo{
-    margin-bottom: 10px;
+.avatar__logo {
+  margin-bottom: 10px;
 }
-.profile_name > span{
-    font-size: 20px;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.profile_usr{
-    font-size: 15px;
-    font-weight: bolder;
-    color: gray;
-    margin-bottom: 10px;
+.profile_name > span {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
 }
 
-.profile_follow > div{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profile_usr {
+  font-size: 15px;
+  font-weight: bolder;
+  color: gray;
+  margin-bottom: 10px;
 }
 
-.profile_follow > div::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 85%;
-    background-color: gray;
-}
-.profile_follow > div:last-child::after{
-    display: none;
+.profile_follow > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.profile_follow > div > h4{
-    margin: 0 !important;
+.profile_follow > div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 85%;
+  background-color: gray;
+}
+.profile_follow > div:last-child::after {
+  display: none;
 }
 
-.profile_follow>div>p {
-    margin: 8px !important;
-    color: gray;
-    font-family: avenir;
-} 
+.profile_follow > div > h4 {
+  margin: 0 !important;
+}
+
+.profile_follow > div > p {
+  margin: 8px !important;
+  color: gray;
+  font-family: avenir;
+}
